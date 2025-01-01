@@ -30,9 +30,7 @@
     .header .navbar-nav{
         margin-top: 2rem;
     }
-    #nav-search{
-        margin-left: -25px;
-    }
+      
     .header .navbar-nav .nav-link{
         padding: 0.2rem 0.5rem;
         margin-bottom: 1rem;
@@ -127,6 +125,9 @@
 }
 
 @media (max-width: 480px) {
+    p{
+        font-size: 8.5px;
+    }
     #floatingCart img {
         width: 40px;
         height: 40px;
