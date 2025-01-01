@@ -2,7 +2,8 @@ body{
     background: url('./images/Banner-1.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+    min-height: 90vh;
    
 }
 .header{
@@ -13,9 +14,7 @@ body{
     z-index: 2;
 }
 
-.header-background{
-    
-}
+
 
 .header .navbar-brand{
     width: 7.5rem;
