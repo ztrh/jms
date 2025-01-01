@@ -37,35 +37,7 @@ body{
     gap: 20px;
     margin-top: 20px;
 }
-.card {
-    flex: 1;
-    max-width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 10px;
-}
-.card .card-body {
-    padding: 20px;
-    background-color: #ffffff;
-}
-.nav-link {
-    color: white !important;
-}
-footer {
-    background-color: #e9ecef;
-}
-.dashboard-title {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2rem;
-}
-.dashboard-title span {
-    color: black;
-    font-weight: bold;
-}
-.dashboard-title .highlight {
-    color: greenyellow;
-}
+
 #username{
     justify-content: right;
 }
