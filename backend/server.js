@@ -12,9 +12,7 @@ let db;
 let collection;
 
 app.use(bodyParser.json());
-app.use(cors({
-  origin: 'https://jms-theta.vercel.app/',
-}));
+app.use(cors());
 
 async function connectToDatabase() {
   try {
