@@ -13,7 +13,7 @@ let collection;
 
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'http://127.0.0.1:5500',
+  origin: 'https://jms-theta.vercel.app/',
 }));
 
 async function connectToDatabase() {
@@ -72,5 +72,5 @@ app.delete('/api/cart/:id', async (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at ${port}`);
 });

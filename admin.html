@@ -101,7 +101,7 @@
             document.addEventListener("DOMContentLoaded", function () {
                 // Fetch and update dashboard stats
                 const updateDashboardStats = () => {
-                    fetch('http://localhost:9000/api/dashboard-stats') // Example endpoint
+                    fetch('https://jms-x5np.onrender.com/api/dashboard-stats') // Example endpoint
                         .then(response => response.json())
                         .then(data => {
                             document.querySelector('.card-title:contains("Total Orders") + .card-text').textContent = data.totalOrders || 0;
@@ -114,7 +114,7 @@
 
                 // Fetch and display customer orders
                 const loadOrders = () => {
-                    fetch('http://localhost:9000/api/cart') // Existing orders API endpoint
+                    fetch('https://jms-x5np.onrender.com/api/cart') // Existing orders API endpoint
                         .then(response => response.json())
                         .then(data => {
                             const tbody = document.querySelector('#orders tbody');
@@ -146,7 +146,7 @@
 
             // Complete an order by sending a DELETE request
             const completeOrder = (orderId) => {
-                fetch(`http://localhost:9000/api/cart/${orderId}`, {
+                fetch(`https://jms-x5np.onrender.com/api/cart/${orderId}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',

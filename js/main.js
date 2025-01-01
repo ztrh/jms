@@ -222,7 +222,7 @@ async function saveCartToDatabase() {
         const cartData = cart.map(item => ({name: item.name, price: item.price, quantity: item.quantity, user: userData.results[0].name.first + " " + userData.results[0].name.last, status: 'pending'}));
         console.log(cartData);
 
-        const response = await fetch('http://localhost:9000/api/cart', {
+        const response = await fetch('https://jms-x5np.onrender.com/api/cart', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
