@@ -14,12 +14,7 @@ body{
 }
 
 .header-background{
-    background: url('./images/header-bg.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    padding:2rem 5rem ;
-
+    
 }
 
 .header .navbar-brand{
