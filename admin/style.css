@@ -1,0 +1,29 @@
+.header{
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+    left: 0;
+    z-index: 2;
+}
+
+.header .navbar{
+    background: url('./images/header-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding:2rem 5rem ;
+   
+}
+
+.header .navbar-brand{
+    width: 7.5rem;
+    margin-top: -0.1rem;
+} 
+
+body{
+    background: url('./images/Banner-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+   
+}

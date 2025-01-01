@@ -1,0 +1,153 @@
+/* Media Query 1170px */
+@media (max-width:1170px) {
+
+    /* General css */
+    .section-subtitle{
+        max-width: 60%;
+    } 
+    /* 02 Banner Section */
+    .banner_section .carousel-item{
+        height: 90vh;
+    }
+}
+
+/* Media Query 991px */
+@media (max-width:991px) {
+    /* General css */
+    .about .banner_section,
+    .product .banner_section,
+    .contact .banner_section,
+    .distributors .banner_section{
+        padding-top: 12.5rem;
+        padding-bottom: 3rem; 
+    }
+   
+    /* 01 Navbar css */
+    .header .navbar{
+        background-size:cover;
+        padding:2rem;
+    }
+    .header .navbar-nav{
+        margin-top: 2rem;
+    }
+    #nav-search{
+        margin-left: -25px;
+    }
+    .header .navbar-nav .nav-link{
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .header .header_right span{
+        padding: 0.2rem 0.5rem;
+    }
+
+}
+
+@media (max-width: 990px) {
+    .navbar-collapse.show + #nav-search {
+        display: none !important;
+    }
+}
+
+
+
+
+/* Media Query 767px */
+@media (max-width:767px) {
+
+    /* General css */
+    body,html{
+        font-size: 8px;
+    }
+    .section-subtitle{
+        max-width: 80%;
+    }
+    
+    /* 02 Banner Section */
+    .banner_section{
+        min-height: 70vh;
+    }
+    .banner_section .carousel-item{
+        height:70vh;
+    }
+    
+}
+
+/* Media Query 590px */
+@media (max-width:590px) {
+
+    /* General css */
+    body,html{
+        font-size: 7px;
+    }
+}
+/*log in*/
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 20px;
+    }
+
+    button, input {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #floatingCart {
+        width: 60px;
+        padding: 5px;
+    }
+
+    #cartPopover {
+        width: 90%;
+        right: 5%;
+        bottom: 80px;
+    }
+
+    .cart-item-details p {
+        font-size: 14px;
+    }
+
+    .cart-actions button {
+        width: 25px;
+        height: 25px;
+        font-size: 18px;
+    }
+
+    #checkoutButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #floatingCart img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #itemCount, #totalPrice {
+        font-size: 12px;
+    }
+
+    #cartPopover {
+        bottom: 70px;
+    }
+
+    .cart-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cart-actions button {
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+    }
+}
