@@ -75,6 +75,7 @@
     </section>
     <!-- banner section exit -->
 
+    
     <!-- Contact Section Start -->
     <section class="contact_section">
         <div class="container">
@@ -86,53 +87,90 @@
                 <div class="col-12 contact-form">
                     <div class="row">
                         <div class="col-lg-7 mb-5">
-                            <div class="row g-3">
-                                <div class="col-md-6 mb-4">
-                                    <input type="text" class="form-control" placeholder="Enter Your Name*" required>
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6 mb-4">
+                                        <input type="text" class="form-control" name="name" placeholder="Enter Your Name*" required>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <input type="text" class="form-control" name="address" placeholder="Enter Your Address*" required>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <input type="number" class="form-control" name="number" placeholder="Enter Your Number*" required>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <textarea class="form-control" name="message" placeholder="Your Message.." required></textarea>
+                                    </div>
+                                    <div class="col-md-12 mb-4">
+                                        <button type="submit" class="btn main-btn">Send Message</button>                                    
+                                    </div>
                                 </div>
-                                <div class="col-md-6 mb-4">
-                                    <input type="email" class="form-control" placeholder="Enter Your Email" required>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <input type="text" class="form-control" placeholder="Enter Your Address*" required>
-                                </div>
-                                <div class="col-md-6 mb-4">
-                                    <input type="number" class="form-control" placeholder="Enter Your Number*" required>
-                                </div>
-                                <div class="col-md-12 mb-4">
-                                    <textarea class="form-control">Your Message..</textarea>
-                                </div>
-                                <div class="col-md-12 mb-4">
-                                    <button type="submit" class="btn main-btn">Send Message</button>                                    
-                                </div>
-                            </div>
+                            </form>
                         </div>
                         <div class="col-lg-5 mb-5">
                             <div class="content-box ms-sm-5">
-                            <ul class="info-box clearfix">
-                                <li>
-                                    <i class="fas fa-phone-alt"></i>
-                                    <p>Any Questions? Call Us</p>
-                                    <div>
-                                        <a href="#">01893634344</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="far fa-envelope-open"></i>
-                                    <p>Any Questions? Email Us</p>
-                                    <div>
-                                        <a href="#">info@example.com</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                                <ul class="info-box clearfix">
+                                    <li>
+                                        <i class="fas fa-phone-alt"></i>
+                                        <p>Any Questions? Call Us</p>
+                                        <div>
+                                            <a href="#">01893634344</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-envelope-open"></i>
+                                        <p>Any Questions? Email Us</p>
+                                        <div>
+                                            <a href="#">info@example.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        const formData = new FormData(this);
+                        fetch('https://jms-x5np.onrender.com/api/cart', {
+                            method: 'POST',
+                            body: JSON.stringify(Object.fromEntries(formData)),
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            alert('Message sent successfully!');
+                            this.reset();
+                        })
+                        .catch(error => {
+                            alert('Error sending message.');
+                            console.error('Error:', error);
+                        });
+                    });
+
+                    document.querySelectorAll('input, textarea').forEach(input => {
+                        input.addEventListener('input', function() {
+                            if (this.checkValidity()) {
+                                this.classList.remove('is-invalid');
+                                this.classList.add('is-valid');
+                            } else {
+                                this.classList.remove('is-valid');
+                                this.classList.add('is-invalid');
+                            }
+                        });
+                    });
+                </script>
             </div>
         </div>
     </section>
-
+    
     <!-- Contact Section Exit -->
 
     <!-- Footer Section Start -->
