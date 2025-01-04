@@ -32,11 +32,17 @@
             }
             
             footer {
-                background-color: #e9ecef;
-               
-                height: 3.5rem;
+               background-color:#e9ecef; 
+                height: 3.6rem;
+                position: absolute;
+                bottom:0;
+                left:0;
+                width: 100%;
               
                 
+            }
+            #orders{
+                overflow-x: auto;
             }
             .dashboard-title {
                 text-align: center;
@@ -54,17 +60,30 @@
                 justify-content: right;
             }
 
+            @media (min-width:590px) and (max-width:750px) {
+              header h1{
+                font-size: 20px;
+                }
+
+                header .logout-btn{
+                    padding: 2px 8px !important;
+                    font-size: 14px;
+                }
+            }
+
             @media (max-width:590px) {
 
             /* General css */
             body,html{
                 font-size: 7px;
                 }
+               
+                
                 }
 
         </style>
     </head>
-    <body style="background: url('./images/Banner-1.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;min-height: 90vh;">
+    <body style="background: url('./images/Banner-1.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; min-height: 100%;">
         <header class="text-white p-3">
             <div class="header-background" style="background: url('./images/header-bg.png');background-repeat: no-repeat;background-position: center;background-size: contain;padding:2rem 5rem ;" >
             <div class="d-flex justify-content-between align-items-center">
@@ -92,24 +111,24 @@
         <div class="container mt-4">
             <div class="dashboard-cards">
                 <div class="row">
-                    <div class="col-lg-4 mb-5 mx-auto col-md-6">
-                        <div class="card text-center">
+                    <div class="col-lg-4 my-3 mx-auto col-md-6">
+                        <div class="card mx-auto  text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Total Orders</h5>
                                 <p class="card-text display-6" id="total-orders"></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4  mb-5 mx-auto col-md-6" >
-                        <div class="card text-center">
+                    <div class="col-lg-4  my-3 mx-auto col-md-6" >
+                        <div class="card  mx-auto text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Customers</h5>
                                 <p class="card-text display-6" id="total-customers"></p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 mb-5 mx-auto col-mb-6 mx-sm-auto">
-                        <div class="card text-center">
+                    <div class="col-lg-4 my-3 mx-auto col-mb-6 mx-sm-auto">
+                        <div class="card mx-auto  text-center">
                             <div class="card-body">
                                 <h5 class="card-title">Revenue</h5>
                                 <p class="card-text display-6" id="total-revenues"></p>
@@ -119,8 +138,8 @@
                 </div>
             </div>
 
-        <div id="orders" class="container mt-4" style="min-height: 90vh;">
-            <h2 style=" background-color: #ffffff; max-width: 35vh; font-weight: 500;">Customer Orders</h2>
+        <div id="orders" class="container mt-4">
+            <h2 style=" background-color: #ffffff; max-width: fit-content;padding: 5px; font-weight: 500;">Customer Orders</h2>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -134,6 +153,8 @@
                 </thead>
                 <tbody>
                 </tbody>
+
+                <!--funcnalitites start-->
                     <script>
                         document.addEventListener("DOMContentLoaded", function () {
                             // Fetch and display customer orders
@@ -231,10 +252,10 @@
 
             <main class="container mt-4">
             </main>
-            <footer class="text-center p-3 mt-4">
-                <p>&copy; 2024 Ecobits. All rights reserved.</p>
-            </footer>
         </div>
+        <footer class="text-center p-3 mt-4">
+            <p>&copy; 2024 Ecobits. All rights reserved.</p>
+        </footer>
 
     </body>
     <script
